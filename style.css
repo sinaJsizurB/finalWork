@@ -44,6 +44,8 @@ p {
 hr {
   color: var(--text_color);
   border: 2px solid #d4bff7;
+  max-width: 1024px;
+  margin: auto;
 }
 
 .btn-outline-primary {
@@ -449,9 +451,31 @@ header #chk {
   width: 100%;
 }
 
-.body_container .content .section .section_text_kontakti {
+.body_container .content .contact_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.body_container .content .contact_wrap .contact_text_section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 30px 0;
+}
+
+.body_container .content .section_text_kontakti {
   margin: 20px 0;
-  line-height: 1em;
+  line-height: 2.5em;
+  width: 100%;
+  margin-top: 90px;
+}
+
+.body_container .content .section_text_kontakti p {
+  text-align: center;
+  font-size: 2em;
 }
 
 .body_container .content .section_content {
@@ -529,6 +553,16 @@ header #chk {
   }
 }
 
+footer {
+  min-height: 10px;
+  max-width: var(--max_width);
+  margin: auto;
+}
+
+footer .popup_cookies .popup_btn {
+  display: none;
+}
+
 @media only screen and (max-width: 700px) {
   #header_img {
     height: 100vh;
@@ -557,6 +591,7 @@ header #chk {
   }
   header .nav_container {
     min-width: var(--min_width);
+    position: fixed;
   }
   header .nav_container::before {
     position: absolute;
@@ -665,6 +700,16 @@ header #chk {
   .body_container {
     display: block;
   }
+  .body_container .content .contact_wrap {
+    display: block;
+  }
+  .body_container .content .contact_wrap .contact_text_section {
+    display: block;
+  }
+  .body_container .content .contact_wrap .contact_text_section .fb-page {
+    margin: 30px auto;
+    width: 80%;
+  }
   .body_container .top_sidemenu_content_container {
     display: block;
     width: 100%;
@@ -712,6 +757,16 @@ header #chk {
             transform: translateY(0px);
     opacity: 1;
   }
+  footer p {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  footer ul li {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
 }
 
 @media only screen and (max-width: 1000px) {
@@ -738,6 +793,172 @@ header #chk {
 @media only screen and (max-width: 835px) {
   .body_container .content #pieteikties .photo_container img {
     width: 300px;
+  }
+}
+
+.pin-title {
+  position: fixed;
+  top: 1.875rem;
+  bottom: 1.875rem;
+  left: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Exo", sans-serif;
+  font-weight: 800;
+  font-size: 800%;
+  letter-spacing: 0.0625rem;
+  color: #f3f3f3;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  z-index: -1;
+  text-align: center;
+}
+
+/* COOKIE POPUP STYLES */
+.cookie-popup {
+  font-size: 0.875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  max-width: var(--max_width);
+  padding: 0.625rem 0.9375rem;
+  -webkit-box-shadow: 0 0 0.625rem 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 0.625rem 0 rgba(0, 0, 0, 0.15);
+  line-height: 150%;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+  opacity: 0;
+}
+
+.cookie-popup--short {
+  width: 21.875rem;
+}
+
+.cookie-popup--dark {
+  background: #000;
+  color: #fff;
+}
+
+.cookie-popup--not-accepted {
+  opacity: 1;
+  -webkit-animation: cookie-popup-in 0.5s ease forwards;
+          animation: cookie-popup-in 0.5s ease forwards;
+}
+
+.cookie-popup--accepted {
+  opacity: 0;
+}
+
+.cookie-popup a {
+  color: skyblue;
+}
+
+.cookie-popup a:visited {
+  color: skyblue;
+  text-decoration: none;
+}
+
+.cookie-popup-actions {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: right;
+}
+
+.cookie-popup-actions button {
+  color: orange;
+  border: none;
+  background: none;
+  font-family: inherit;
+  font-style: inherit;
+  font-size: inherit;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  padding: 0;
+  cursor: pointer;
+}
+
+.cookie-popup-actions button:hover {
+  text-decoration: underline;
+}
+
+@-webkit-keyframes cookie-popup-in {
+  from {
+    bottom: -6.25rem;
+  }
+  to {
+    bottom: 1.25rem;
+  }
+}
+
+@keyframes cookie-popup-in {
+  from {
+    bottom: -6.25rem;
+  }
+  to {
+    bottom: 1.25rem;
+  }
+}
+
+#ui-datepicker-div {
+  background: var(--background_color);
+  width: 100%;
+  max-width: 540px;
+  margin: auto;
+  min-width: var(--min_width);
+}
+
+#ui-datepicker-div .ui-datepicker-calendar tbody tr td a {
+  background: var(--text_color);
+  border-radius: 5px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 700px) {
+  #ui-datepicker-div {
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 80%;
+    padding: 0 20px;
+  }
+  #ui-datepicker-div .ui-datepicker-calendar {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  #ui-datepicker-div .ui-datepicker-header {
+    background: var(--text_color);
+  }
+  #ui-datepicker-div .ui-datepicker-calendar tbody tr td a {
+    background: var(--text_color);
+    border-radius: 5px;
+    text-align: center;
+  }
+  #facebook .plugin ._li #u_0_0_pR ._2p3a {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */
