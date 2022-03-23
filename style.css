@@ -76,7 +76,7 @@ hr {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-image: url(/img/pexels-cottonbro-4324059.png);
+  background-image: url(img/pexels-cottonbro-4324059.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -103,21 +103,6 @@ hr {
   opacity: 1;
 }
 
-/*
-.body_container .content .section .photo_container {
-  .appearOnScroll {
-    position: relative;
-    transform: translateY(150px);
-    opacity: 0;
-    transition: all 1.5s ease;
-  }
-
-  .appearOnScroll.active {
-    transform: translateY(0px);
-    opacity: 1;
-  }
-}
-*/
 header {
   max-height: 700px;
   min-height: 500px;
@@ -407,10 +392,8 @@ header #chk {
   padding: 20px 10px;
   -o-object-fit: cover;
      object-fit: cover;
-  /* Do not scale the image */
   -o-object-position: center;
      object-position: center;
-  /* Center the image within the element */
   height: 300px;
   width: 200px;
 }
@@ -522,10 +505,8 @@ header #chk {
   padding: 20px 10px;
   -o-object-fit: cover;
      object-fit: cover;
-  /* Do not scale the image */
   -o-object-position: center;
      object-position: center;
-  /* Center the image within the element */
   height: 300px;
   width: 200px;
 }
@@ -551,6 +532,21 @@ header #chk {
   to {
     text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
   }
+}
+
+#check_input span {
+  color: var(--text_color);
+  margin: 0 5px;
+}
+
+#check_input a {
+  color: var(--text_color);
+  text-decoration: none;
+}
+
+#check_input a:hover {
+  color: #c19ff7;
+  text-decoration: none;
 }
 
 footer {

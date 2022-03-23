@@ -63,7 +63,7 @@ hr {
   display: flex;
   position: absolute;
   justify-content: center;
-  background-image: url(/img/pexels-cottonbro-4324059.png);
+  background-image: url(img/pexels-cottonbro-4324059.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -85,21 +85,7 @@ hr {
     opacity: 1;
   }
 }
-/*
-.body_container .content .section .photo_container {
-  .appearOnScroll {
-    position: relative;
-    transform: translateY(150px);
-    opacity: 0;
-    transition: all 1.5s ease;
-  }
 
-  .appearOnScroll.active {
-    transform: translateY(0px);
-    opacity: 1;
-  }
-}
-*/
 header {
   max-height: 700px;
   min-height: 500px;
@@ -306,8 +292,8 @@ header {
           text-align: center;
           img {
             padding: 20px 10px;
-            object-fit: cover; /* Do not scale the image */
-            object-position: center; /* Center the image within the element */
+            object-fit: cover;
+            object-position: center;
             height: 300px;
             width: 200px;
           }
@@ -392,8 +378,8 @@ header {
       .photo_container {
         img {
           padding: 20px 10px;
-          object-fit: cover; /* Do not scale the image */
-          object-position: center; /* Center the image within the element */
+          object-fit: cover;
+          object-position: center;
           height: 300px;
           width: 200px;
         }
@@ -422,6 +408,18 @@ header {
         0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
     }
   }
+}
+#check_input span {
+  color: var(--text_color);
+  margin: 0 5px;
+}
+#check_input a {
+  color: var(--text_color);
+  text-decoration: none;
+}
+#check_input a:hover {
+  color: #c19ff7;
+  text-decoration: none;
 }
 footer {
   min-height: 10px;

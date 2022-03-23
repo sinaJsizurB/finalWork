@@ -68,3 +68,46 @@ $( function() {
 
     });
   } );
+
+const req = new Request();
+
+req.get('api.php?name=getSubscribers', function (response) {
+    for (let subscriber of response.subscribers) {
+        printSubscriber(subscriber)
+    }
+})
+
+document.querySelector('form').onsubmit = function(event) {
+    event.preventDefault()
+    if(document.getElementById('subscription_check').checked) {
+        const url = this.getAttribute('action')
+        let form = this;
+        req.post(url, new FormData(this), function (response) {
+            if (response.hasOwnProperty('entity')) {
+                for (let input of form.querySelectorAll('input')) {
+                    input.value = ''
+                    input.checked = false
+                }
+                document.getElementById('message').textContent = ''
+            }
+        })
+    }
+    else {
+        document.getElementById('message').textContent = "Lūdzu apstipriniet noteiktumus!"
+    }
+}
+
+
+
+
+function deleteHandler(event) {
+    event.preventDefault()
+    const url = this.getAttribute('href')
+    const data = new FormData()
+    data.append('id', this.dataset.id)
+    const btn = this
+
+    req.post(url, data, function (response) {
+        btn.parentNode.parentNode.remove()
+    })
+}

@@ -17,10 +17,10 @@
     <link href="js/lightboxed/lightboxed.css" rel="stylesheet" />
     <!--kalendāram-->
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="/resources/demos/style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
     <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -28,13 +28,13 @@
         <div id="header_img"></div>
         <div class="nav_container">
             <div class="logo_container">
-                <img class="logo_symbol swing" src="/img/logo-symbol.png" alt="">
-                <a href="index.html"><img class="logo" src="/img/logo.png" alt=""></a>
+                <img class="logo_symbol swing" src="img/logo-symbol.png" alt="logo">
+                <a href="index.html"><img class="logo" src="img/logo.png" alt=""></a>
             </div>
             <input type="checkbox" id="chk" />
             <label for="chk" class="show-menu-btn"><i class="fas fa-ellipsis-h"></i></label>
             <nav id="menu" class="top_menu menu_container">
-                    <a class="menu_a first" href="/index.html#par_mums">Par mums</a>
+                    <a class="menu_a first" href="index.html#par_mums">Par mums</a>
                     <a class="menu_a secound" href="index.html#pieteikties">Pieteikties</a>
                     <a class="menu_a last" href="index.html#kontakti">Kontakti</a>
                     <label for="chk" class="hide-menu-btn"><i class="fas fa-times"></i></label>
@@ -48,7 +48,7 @@
             <div class="sidemenu">
                 <ul>
                     <li>
-                        <a href="/gallery.html"><i class="sidelink fas fa-images"></i>Galerija</a>
+                        <a href="gallery.html"><i class="sidelink fas fa-images"></i>Galerija</a>
                     </li>
                     <li>
                         <a href="https://www.youtube.com/user/DejuStudijaEXTRA/videos"><i class="sidelink fas fa-film"></i>Video</a>
@@ -68,7 +68,7 @@
                         <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam officiis quibusdam accusamus enim ducimus ad facere culpa deserunt. Fugit, eius. Quasi ducimus nulla iure ex culpa velit laudantium tenetur! Tempora officiis veniam eligendi necessitatibus voluptas recusandae corporis ipsum hic, dolore ex, adipisci reprehenderit, eius ipsam quam eveniet qui. Doloribus corrupti voluptatum maxime pariatur vel tempore nostrum explicabo odit unde rem, consequuntur sunt incidunt qui ex eos nisi fugit ut eveniet dolorum voluptas reprehenderit magnam facilis. Ipsum vero dicta architecto adipisci deserunt? Eligendi magni ab, totam molestias sunt provident vel placeat unde quidem, voluptate molestiae, veniam soluta illo alias rerum eveniet accusantium consequatur ducimus optio. Perspiciatis laborum impedit ratione, ut vero asperiores nesciunt dolor placeat!  </p>
                     </div>
                     <div class="section_img appearOnScroll">
-                        <img src="/img/pexels-photo-4323290.jpeg" alt="" width="300px">
+                        <img src="img/pexels-photo-4323290.jpeg" alt="" width="300px">
                     </div>
                 </div>
                 
@@ -79,34 +79,39 @@
         <div class="content">
             <section class="section section_content">
                 <h1 class="appearOnScroll h1_other">Pieteikties</h1>
-                 <form class="appearOnScroll" action="">
+                <p id="message"></p>
+                 <form id="myForm" class="appearOnScroll" action="api.php?name=subscribe">
                     <div class="input-group">
-                    <span class="input-group-text">Datums:</span>
-                    <input type="text" aria-label="Date" class="form-control" id="datepicker">
+                        <span for="datepicker" class="input-group-text">Datums:</span>
+                        <input type="text" aria-label="Date" class="form-control" id="datepicker" name="datepicker" autocomplete="none">
                     </div>
                     <div class="input-group">
-                        <span class="input-group-text">Vārds</span>
-                        <input type="text" aria-label="First name" class="form-control">
+                        <span for="subscription_name" class="input-group-text">Vārds</span>
+                        <input type="text" aria-label="First name" class="form-control" id="subscription_name" name="name">
                     </div>
                     <div class="input-group">
-                        <span class="input-group-text">Uzvārds</span>
-                        <input type="text" aria-label="Last name" class="form-control">
+                        <span for="subscription_surname" class="input-group-text">Uzvārds</span>
+                        <input type="text" aria-label="Last name" class="form-control" id="subscription_surname" name="surname">
                     </div>
                     <div class="input-group">
-                        <span class="input-group-text">e-pasts</span>
-                        <input type="text" aria-label="First name" class="form-control">
+                        <span for="subscription_email" class="input-group-text">e-pasts</span>
+                        <input type="email" aria-label="Email" class="form-control" id="subscription_email" aria-describedby="emailHelp" name="email">
                     </div>
                     <div class="input-group">
-                        <span class="input-group-text">Tel.Nr.</span>
-                        <input type="text" aria-label="First name" class="form-control">
+                        <span for="subscription_phone" class="input-group-text">Tel.Nr.</span>
+                        <input type="text" aria-label="First name" class="form-control" id="subscription_phone" name="phone">
                     </div>
-                    <button type="button" name="submit" id="submitBtn" class="btn btn-outline-primary">Nosūtīt</button>
+                    <div class="input-group mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="subscription_check">
+                        <label id="check_input" class="form-check-label" for="subscription_check"> <span>Piekrist mūsu</span><a href="privatuma_politika.html">Privātuma politikai</a></label>
+                    </div>
+                    <button onclick="sendEmail()" type="submit" name="submit" id="submitBtn" class="btn btn-outline-primary btn-success">Nosūtīt</button>
                 </form>
                 <div class="photo_container container">
-                    <img rel="group1" src="/img/Gallery1.png" class="appearOnScroll lightboxed" data-link="/img/Gallery1.png" alt="Image Alt" alt="" width="200px">
-                    <img rel="group1" src="/img/Gallery2.png" class="appearOnScroll lightboxed" data-link="/img/Gallery2.png" alt="Image Alt" alt="" width="200px">
-                    <img rel="group1" src="/img/Gallery3.png" class="appearOnScroll lightboxed" data-link="/img/Gallery3.png" alt="Image Alt" alt="" width="200px">
-                    <img rel="group1" src="/img/Gallery4.png" class="appearOnScroll lightboxed" data-link="/img/Gallery4.png" alt="Image Alt" alt="" width="200px">
+                    <img rel="group1" src="img/Gallery1.png" class="appearOnScroll lightboxed" data-link="img/Gallery1.png" alt="Image Alt" alt="" width="200px">
+                    <img rel="group1" src="img/Gallery2.png" class="appearOnScroll lightboxed" data-link="img/Gallery2.png" alt="Image Alt" alt="" width="200px">
+                    <img rel="group1" src="img/Gallery3.png" class="appearOnScroll lightboxed" data-link="img/Gallery3.png" alt="Image Alt" alt="" width="200px">
+                    <img rel="group1" src="img/Gallery4.png" class="appearOnScroll lightboxed" data-link="img/Gallery4.png" alt="Image Alt" alt="" width="200px">
                 </div>
             </section>
             <hr id="kontakti">
@@ -120,21 +125,14 @@
                                 <p>Liepāja, LV-3401</p>
                                 <p>SIA EXTRA FLY</p>
                     </div>
-                    <div id="fb-root"></div>
-                    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/lv_LV/sdk.js#xfbml=1&version=v13.0"
-                        nonce="hMtAhodV"></script>
-                    <div class="fb-page" data-href="https://www.facebook.com/DejuStudijaExtra/" data-tabs="timeline" data-width=""
-                        data-height="600px" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false"
-                        data-show-facepile="true" style="display: flex; width: fit-content;">
-                        <blockquote cite="https://www.facebook.com/DejuStudijaExtra/" class="fb-xfbml-parse-ignore"><a
-                                href="https://www.facebook.com/DejuStudijaExtra/">Deju Studija &quot;Extra&quot;</a></blockquote>
-                    </div>
+                   
+
                     
                 </div>
                 <div class="section_img appearOnScroll">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d622.0626097776751!2d21.016697820701012!3d56.52233837737427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46faa63a37906e8b%3A0xca786ffb940764e3!2sDeju%20studija%20EXTRA!5e0!3m2!1sen!2slv!4v1647934765966!5m2!1sen!2slv"
-                         width="100%" max-width="1024px" height="450" style="border:0; display: flex;" allowfullscreen="" loading="lazy"></iframe>
+                         width="100%" max-width="1024px" height="450px" style="border:0; display: flex;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
                 
                 
@@ -155,10 +153,10 @@
                 </a>
         
                 <ul class="nav col-md-4 justify-content-end">
-                    <li class="nav-item"><a href="/index.html" class="nav-link px-2 text-muted">Sākums</a></li>
-                    <li class="nav-item"><a href="/index.html#par_mums" class="nav-link px-2 text-muted">Par mums</a></li>
+                    <li class="nav-item"><a href="index.html" class="nav-link px-2 text-muted">Sākums</a></li>
+                    <li class="nav-item"><a href="index.html#par_mums" class="nav-link px-2 text-muted">Par mums</a></li>
                     <li class="nav-item"><a href="index.html#pieteikties" class="nav-link px-2 text-muted">Pieteikties</a></li>
-                    <li class="nav-item"><a href="/gallery.html" class="nav-link px-2 text-muted">Galerija</a></li>
+                    <li class="nav-item"><a href="gallery.html" class="nav-link px-2 text-muted">Galerija</a></li>
                     <li class="nav-item"><a href="https://www.facebook.com/DejuStudijaExtra/" class="fbIcon nav-link px-2 text-muted"><i class="sidelink fa-brands fa-facebook"></i>Facebook</a></li>
                     <li class="nav-item"><a href="#" class="nav-link px-2 text-muted"><i class="sidelink fa-brands fa-instagram"></i>Instagram</a></li>
                 </ul>
@@ -172,7 +170,7 @@
     <div class="popup_cookies container">
         <button class="popup_btn" onclick="_switchMode('cookie-popup--short')" style="display: none;">Switch .cookie-popup--short</button>
         <button class="popup_btn" onclick="_switchMode('cookie-popup--dark')" style="display: none;">Switch .cookie-popup--dark</button>
-        <button class="popup_btn" onclick="_reset()" style="display: none;">Reset cookie accept</button>
+        <button class="popup_btn" onclick="_reset()" style="display: block;">Reset cookie accept</button>
     
         <div class="pin-title"></div>
     
@@ -187,7 +185,7 @@
                  
                 
                 <a
-                    href="/privatuma_politika.html">Privātuma politika</a>
+                    href="privatuma_politika.html">Privātuma politika</a>
             </div>
             <div class="cookie-popup-actions">
                 <button>Piekrist</button>
@@ -196,21 +194,10 @@
         </div>
     
     </div>
-    <script src="https://kit.fontawesome.com/99fe32b697.js" crossorigin="anonymous"></script>
-    <script src="/js/script.js"></script>
+    <script src="sendMail.js"></script>
     <script src="Request.js"></script>
-    <script src="/js/lightboxed/lightboxed.js"></script>
-    <script>
-        window.fbAsyncInit = function () {
-            FB.init({
-                appId: 'your-app-id',
-                autoLogAppEvents: true,
-                xfbml: true,
-                version: 'v13.0'
-            });
-        };
-    </script>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+    <script src="js/lightboxed/lightboxed.js"></script>
+    <script src="script.js"></script>
     
 </body>
 </html>
