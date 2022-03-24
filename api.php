@@ -43,7 +43,6 @@ if (isset($_GET['name']) && is_string($_GET['name'])) {
                     }
                 }
             }
-
             break;
     }
 }

@@ -57,9 +57,13 @@ function _switchMode(cssClass) {
   el('.cookie-popup').classList.toggle(cssClass);
 }
 //datepicker
+
 $( function() {
     $( "#datepicker" ).datepicker({
       firstDay: 1,
+      dateFormat: "dd-mm-yy",
+      maxDate: '+2m',              
+      minDate: 'date',         
       dayNamesMin: [ "Sv", "P", "O", "T", "C", "P", "S" ],
       dayNames: [ "Svētdiena", "Pirmdiena", "Otrdiena", "Trešdiena", "Ceturtdiena", "Piektdiena", "Sestdiena" ],
       monthNames: [ "Janvāris", "Februāris", "Marts", "Aprīlis", "Maijs", "Jūnijs", "Jūlijs", "Augusts", "Septembris", "Oktobris", "Novembris", "Decembris" ],
@@ -88,7 +92,7 @@ document.querySelector('form').onsubmit = function(event) {
                     input.value = ''
                     input.checked = false
                 }
-                document.getElementById('message').textContent = ''
+                document.getElementById('message').textContent = 'Jūsu pieteikums ir nosūtīts!'
             }
         })
     }

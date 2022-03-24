@@ -20,7 +20,7 @@ function sendEmail() {
                 phone: phone.val(),
             }, success: function (response) {
                 $('#myForm')[0].reset();
-                $('#message').text("E-pasts ir nosūtīts!");
+                $('#message2').text("E-pasts ir nosūtīts!");
             }
         });
     }

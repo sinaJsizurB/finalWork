@@ -545,7 +545,7 @@ header #chk {
 }
 
 #check_input a:hover {
-  color: #c19ff7;
+  color: var(--text_color);
   text-decoration: none;
 }
 
