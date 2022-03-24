@@ -919,7 +919,6 @@ footer .popup_cookies .popup_btn {
   width: 100%;
   max-width: 540px;
   margin: auto;
-  min-width: var(--min_width);
 }
 
 #ui-datepicker-div .ui-datepicker-calendar tbody tr td a {
@@ -928,7 +927,7 @@ footer .popup_cookies .popup_btn {
   text-align: center;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 535px) {
   #ui-datepicker-div {
     margin: auto;
     display: -webkit-box;
@@ -938,8 +937,8 @@ footer .popup_cookies .popup_btn {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    width: 80%;
-    padding: 0 20px;
+    width: 306px;
+    padding: 0 10px;
   }
   #ui-datepicker-div .ui-datepicker-calendar {
     -webkit-box-sizing: border-box;
@@ -953,8 +952,9 @@ footer .popup_cookies .popup_btn {
     border-radius: 5px;
     text-align: center;
   }
-  #facebook .plugin ._li #u_0_0_pR ._2p3a {
+  #myForm .input-group .inp_datepicker {
     width: 100%;
+    border-radius: 5px 5px 0 0;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -748,7 +748,6 @@ footer {
   width: 100%;
   max-width: 540px;
   margin: auto;
-  min-width: var(--min_width);
 }
 #ui-datepicker-div .ui-datepicker-calendar tbody tr td a {
   background: var(--text_color);
@@ -756,13 +755,13 @@ footer {
   text-align: center;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 535px) {
   #ui-datepicker-div {
     margin: auto;
     display: flex;
     flex-direction: column;
-    width: 80%;
-    padding: 0 20px;
+    width: 306px;
+    padding: 0 10px;
     .ui-datepicker-calendar {
       box-sizing: border-box;
     }
@@ -775,7 +774,9 @@ footer {
     border-radius: 5px;
     text-align: center;
   }
-  #facebook .plugin ._li #u_0_0_pR ._2p3a {
+
+  #myForm .input-group .inp_datepicker {
     width: 100%;
+    border-radius: 5px 5px 0 0;
   }
 }

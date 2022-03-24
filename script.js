@@ -60,6 +60,7 @@ function _switchMode(cssClass) {
 
 $( function() {
     $( "#datepicker" ).datepicker({
+      
       firstDay: 1,
       dateFormat: "dd-mm-yy",
       maxDate: '+2m',              
