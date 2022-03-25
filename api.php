@@ -11,14 +11,14 @@ $output = ['status' => false];
 
 if (isset($_GET['name']) && is_string($_GET['name'])) {
     switch ($_GET['name']) {
-
         case 'subscribe':
+            $output['status'] = isset($_POST['name']);
             if (
-                isset($_POST['datepicker']) && is_string($_POST['datepicker']) &&
-                isset($_POST['name']) && is_string($_POST['name']) &&
-                isset($_POST['surname']) && is_string($_POST['surname']) &&
-                isset($_POST['email']) && is_string($_POST['email']) &&
-                isset($_POST['phone']) && is_string($_POST['phone'])
+                (isset($_POST['datepicker']) && is_string($_POST['datepicker'])) &&
+                (isset($_POST['name']) && is_string($_POST['name'])) &&
+                (isset($_POST['surname']) && is_string($_POST['surname'])) &&
+                (isset($_POST['email']) && is_string($_POST['email'])) &&
+                (isset($_POST['phone']) && is_string($_POST['phone']))
 
             ) {
                 $subscribers = new Subscribers();
@@ -28,7 +28,7 @@ if (isset($_GET['name']) && is_string($_GET['name'])) {
                     'name' => $_POST['name'],
                     'surname' => $_POST['surname'],
                     'email' => $_POST['email'],
-                    'phone' => $_POST['phone'],
+                    'phone' => $_POST['phone']
                 ];
 
                 $entity = $subscribers->addEntity($entity);

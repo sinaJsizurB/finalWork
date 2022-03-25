@@ -8,6 +8,7 @@ function sendEmail() {
     
 
     if (isNotEmpty(datepicker) && isNotEmpty(name) && isNotEmpty(surname) && isNotEmpty(email) && isNotEmpty(phone)) {
+        if(document.getElementById('subscription_check').checked) {
         $.ajax({
             url: 'sendEmail.php',
             method: 'POST',
@@ -23,6 +24,10 @@ function sendEmail() {
                 $('#message2').text("E-pasts ir nosūtīts!");
             }
         });
+    }
+    else {
+        document.getElementById('message').textContent = "Lūdzu apstipriniet noteiktumus!"
+    }
     }
     }
 

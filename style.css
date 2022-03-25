@@ -48,6 +48,7 @@ p {
 hr {
   color: var(--text_color);
   border: 2px solid #d4bff7;
+  width: 95%;
   max-width: 1024px;
   margin: auto;
 }

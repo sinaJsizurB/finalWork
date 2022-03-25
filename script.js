@@ -73,14 +73,9 @@ $( function() {
 
     });
   } );
+  
 
 const req = new Request();
-
-req.get('api.php?name=getSubscribers', function (response) {
-    for (let subscriber of response.subscribers) {
-        printSubscriber(subscriber)
-    }
-})
 
 document.querySelector('form').onsubmit = function(event) {
     event.preventDefault()
