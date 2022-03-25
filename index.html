@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,10 +24,11 @@
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">
-    
+
 </head>
+
 <body>
-    <header >
+    <header>
         <div id="header_img"></div>
         <div class="nav_container">
             <div class="logo_container">
@@ -36,13 +38,13 @@
             <input type="checkbox" id="chk" />
             <label for="chk" class="show-menu-btn"><i class="fas fa-ellipsis-h"></i></label>
             <nav id="menu" class="top_menu menu_container">
-                    <a class="menu_a first" href="index.html#par_mums">Par mums</a>
-                    <a class="menu_a secound" href="index.html#pieteikties">Pieteikties</a>
-                    <a class="menu_a last" href="index.html#kontakti">Kontakti</a>
-                    <label for="chk" class="hide-menu-btn"><i class="fas fa-times"></i></label>
-                    </ul>
-                </nav>
-                
+                <a class="menu_a first" href="index.html#par_mums">Par mums</a>
+                <a class="menu_a secound" href="index.html#pieteikties">Pieteikties</a>
+                <a class="menu_a last" href="index.html#kontakti">Kontakti</a>
+                <label for="chk" class="hide-menu-btn"><i class="fas fa-times"></i></label>
+                </ul>
+            </nav>
+
         </div>
     </header>
     <div class="body_container">
@@ -53,13 +55,16 @@
                         <a href="gallery.html"><i class="sidelink fas fa-images"></i>Galerija</a>
                     </li>
                     <li>
-                        <a href="https://www.youtube.com/user/DejuStudijaEXTRA/videos"><i class="sidelink fas fa-film"></i>Video</a>
+                        <a href="https://www.youtube.com/user/DejuStudijaEXTRA/videos"><i
+                                class="sidelink fas fa-film"></i>Video</a>
                     </li>
                     <li>
-                        <a href="https://www.facebook.com/DejuStudijaExtra/" class="fbIcon"><i class="sidelink fa-brands fa-facebook"></i>Facebook</a>
+                        <a href="https://www.facebook.com/DejuStudijaExtra/" class="fbIcon"><i
+                                class="sidelink fa-brands fa-facebook"></i>Facebook</a>
                     </li>
                     <li>
-                        <a href="#"><i class="sidelink fa-brands fa-instagram"></i>Instagram</a>
+                        <a href="https://instagram.com/dejustudijaextra?utm_medium=copy_link"><i
+                                class="sidelink fa-brands fa-instagram"></i>Instagram</a>
                     </li>
                 </ul>
             </div>
@@ -67,21 +72,26 @@
                 <div class="section_text appearOnScroll">
                     <div class="about_us_text appearOnScroll">
                         <h1 class="">PAR MUMS</h1>
-                        <p class="">AntiGravity® yoga jeb “gaisa joga”, ir jauna veida joga, kuras izcelsme meklējama Ņujorkā, bet tagad tā tiek piekopta
-                        vairākās valstīs. Antigravitātes joga apvieno tradicionālās jogas pozas, pilates un dejas, izmantojot šūpuļtīklu.<br>
-                        <br>
-                        AntiGravity® yoga ir jauna veida treniņš, ko izgudroja akrobāts Kristofers Harisons — bijušais vingrotājs un Brodvejas
-                        horeogrāfs. Tā sevī ietver virkni vingrojumu, iedvesmojoties no jogas, pilatēm, mākslas vingrošanas un gaisa akrobātikas
-                        šūpuļtīklam līdzīgā lentā, lai veiktu kopējo ķermeņa treniņu.  </p>
+                        <p class="">AntiGravity® yoga jeb “gaisa joga”, ir jauna veida joga, kuras izcelsme meklējama
+                            Ņujorkā, bet tagad tā tiek piekopta
+                            vairākās valstīs. Antigravitātes joga apvieno tradicionālās jogas pozas, pilates un dejas,
+                            izmantojot šūpuļtīklu.<br>
+                            <br>
+                            AntiGravity® yoga ir jauna veida treniņš, ko izgudroja akrobāts Kristofers Harisons —
+                            bijušais vingrotājs un Brodvejas
+                            horeogrāfs. Tā sevī ietver virkni vingrojumu, iedvesmojoties no jogas, pilatēm, mākslas
+                            vingrošanas un gaisa akrobātikas
+                            šūpuļtīklam līdzīgā lentā, lai veiktu kopējo ķermeņa treniņu.
+                        </p>
                         <span id="readMore_span"><a id="readMore" href="about_us.html">Lasīt vairāk..</a></span>
                     </div>
                     <div class="section_img appearOnScroll">
                         <img src="img/pexels-photo-4323290.jpeg" alt="" width="300px">
                     </div>
                 </div>
-                
+
             </section>
-        
+
         </div>
         <hr id="pieteikties">
         <div class="content">
@@ -89,38 +99,49 @@
                 <h1 class="appearOnScroll h1_other">Pieteikties</h1>
                 <p id="message2"></p>
                 <p id="message"></p>
-                 <form id="myForm" class="appearOnScroll" action="api.php?name=subscribe">
+                <form id="myForm" class="appearOnScroll" action="api.php?name=subscribe" autocomplete="off">
                     <div class="input-group">
                         <span for="datepicker" class="inp_datepicker input-group-text">Datums:</span>
-                        <input type="text" aria-label="Date" class="form-control" id="datepicker" name="datepicker" autocomplete="none">
+                        <input type="text" aria-label="Date" class="form-control" id="datepicker" name="datepicker"
+                            autocomplete="off" readonly="readonly">
                     </div>
                     <div class="input-group">
                         <span for="subscription_name" class="input-group-text">Vārds</span>
-                        <input type="text" aria-label="First name" class="form-control" id="subscription_name" name="name " autocomplete="none">
+                        <input type="text" aria-label="First name" class="form-control" id="subscription_name"
+                            name="name " autocomplete="off">
                     </div>
                     <div class="input-group">
                         <span for="subscription_surname" class="input-group-text">Uzvārds</span>
-                        <input type="text" aria-label="Last name" class="form-control" id="subscription_surname" name="surname" autocomplete="none">
+                        <input type="text" aria-label="Last name" class="form-control" id="subscription_surname"
+                            name="surname" autocomplete="off">
                     </div>
                     <div class="input-group">
                         <span for="subscription_email" class="input-group-text">e-pasts</span>
-                        <input type="email" aria-label="Email" class="form-control" id="subscription_email" aria-describedby="emailHelp" name="email" autocomplete="none">
+                        <input type="email" aria-label="Email" class="form-control" id="subscription_email"
+                            aria-describedby="emailHelp" name="email" autocomplete="off">
                     </div>
                     <div class="input-group">
                         <span for="subscription_phone" class="input-group-text">Tel.Nr.</span>
-                        <input type="text" aria-label="First name" class="form-control" id="subscription_phone" name="phone" autocomplete="none">
+                        <input type="text" aria-label="First name" class="form-control" id="subscription_phone"
+                            name="phone" autocomplete="off">
                     </div>
                     <div class="input-group mb-3 form-check">
                         <input type="checkbox" class="form-check-input" id="subscription_check">
-                        <label id="check_input" class="form-check-label" for="subscription_check"> <span>Piekrist mūsu</span><a href="privatuma_politika.html">Privātuma politikai</a></label>
+                        <label id="check_input" class="form-check-label" for="subscription_check"> <span>Piekrist
+                                mūsu</span><a href="privatuma_politika.html">Privātuma politikai</a></label>
                     </div>
-                    <button onclick="sendEmail()" type="submit" name="submit" id="submitBtn" class="btn btn-outline-primary btn-success">Nosūtīt</button>
+                    <button onclick="sendEmail()" type="submit" name="submit" id="submitBtn"
+                        class="btn btn-outline-primary btn-success">Nosūtīt</button>
                 </form>
                 <div class="photo_container container">
-                    <img rel="group1" src="img/Gallery1.png" class="appearOnScroll lightboxed" data-link="img/Gallery1.png" alt="Image Alt" alt="" width="200px">
-                    <img rel="group1" src="img/Gallery2.png" class="appearOnScroll lightboxed" data-link="img/Gallery2.png" alt="Image Alt" alt="" width="200px">
-                    <img rel="group1" src="img/Gallery3.png" class="appearOnScroll lightboxed" data-link="img/Gallery3.png" alt="Image Alt" alt="" width="200px">
-                    <img rel="group1" src="img/Gallery4.png" class="appearOnScroll lightboxed" data-link="img/Gallery4.png" alt="Image Alt" alt="" width="200px">
+                    <img rel="group1" src="img/Gallery1.png" class="appearOnScroll lightboxed"
+                        data-link="img/Gallery1.png" alt="Image Alt" alt="" width="200px">
+                    <img rel="group1" src="img/Gallery2.png" class="appearOnScroll lightboxed"
+                        data-link="img/Gallery2.png" alt="Image Alt" alt="" width="200px">
+                    <img rel="group1" src="img/Gallery3.png" class="appearOnScroll lightboxed"
+                        data-link="img/Gallery3.png" alt="Image Alt" alt="" width="200px">
+                    <img rel="group1" src="img/Gallery4.png" class="appearOnScroll lightboxed"
+                        data-link="img/Gallery4.png" alt="Image Alt" alt="" width="200px">
                 </div>
             </section>
             <hr id="kontakti">
@@ -128,87 +149,100 @@
                 <h1 class="appearOnScroll h1_other">Kontakti</h1>
                 <div class="contact_text_section">
                     <div class="section_text_kontakti appearOnScroll">
-                                <p>SIA EXTRA FLY</p>
-                                <p>Reģ.Nr. 40203310311</p>
-                                <p>Zāļu iela 16 - 3</p>
-                                <p>Liepāja, LV-3401</p>
-                                <p>SIA EXTRA FLY</p>
+                        <p>SIA EXTRA FLY</p>
+                        <p>Reģ.Nr. 40203310311</p>
+                        <p>Zāļu iela 16 - 3</p>
+                        <p>Liepāja, LV-3401</p>
+                        <p>SIA EXTRA FLY</p>
                     </div>
-                   
 
-                    
+
+
                 </div>
                 <div class="section_img appearOnScroll">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d622.0626097776751!2d21.016697820701012!3d56.52233837737427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46faa63a37906e8b%3A0xca786ffb940764e3!2sDeju%20studija%20EXTRA!5e0!3m2!1sen!2slv!4v1647934765966!5m2!1sen!2slv"
-                         width="100%" max-width="1024px" height="450px" style="border:0; display: flex;" allowfullscreen="" loading="lazy"></iframe>
+                        width="100%" max-width="1024px" height="450px" style="border:0; display: flex;"
+                        allowfullscreen="" loading="lazy"></iframe>
                 </div>
-                
-                
+
+
             </section>
-        </div>  
+        </div>
     </div>
     <footer>
         <div class="container">
             <hr>
             <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4">
                 <p class="col-md-4 mb-0 text-muted">&copy; 2022 EXTRAF FLY SIA</p>
-        
+
                 <a href="/"
                     class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
                     <svg class="bi me-2" width="40" height="32">
                         <use xlink:href="#bootstrap" />
                     </svg>
                 </a>
-                
-        
+
+
                 <ul class="nav col-md-4 justify-content-end">
                     <li class="nav-item"><a href="index.html" class="nav-link px-2 text-muted">Sākums</a></li>
-                    <li class="nav-item"><a href="index.html#par_mums" class="nav-link px-2 text-muted">Par mums</a></li>
-                    <li class="nav-item"><a href="index.html#pieteikties" class="nav-link px-2 text-muted">Pieteikties</a></li>
+                    <li class="nav-item"><a href="index.html#par_mums" class="nav-link px-2 text-muted">Par mums</a>
+                    </li>
+                    <li class="nav-item"><a href="index.html#pieteikties"
+                            class="nav-link px-2 text-muted">Pieteikties</a></li>
                     <li class="nav-item"><a href="gallery.html" class="nav-link px-2 text-muted">Galerija</a></li>
-                    <li class="nav-item"><a href="https://www.facebook.com/DejuStudijaExtra/" class="fbIcon nav-link px-2 text-muted"><i class="sidelink fa-brands fa-facebook"></i>Facebook</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted"><i class="sidelink fa-brands fa-instagram"></i>Instagram</a></li>
-                    <li class="nav-item"><a href="privatuma_politika.html" class="nav-link px-2 text-muted">Privatuma politika</a></li>
+                    <li class="nav-item"><a href="https://www.facebook.com/DejuStudijaExtra/"
+                            class="fbIcon nav-link px-2 text-muted"><i
+                                class="sidelink fa-brands fa-facebook"></i>Facebook</a></li>
+                    <li class="nav-item"><a href="https://instagram.com/dejustudijaextra?utm_medium=copy_link"
+                            class="nav-link px-2 text-muted"><i
+                                class="sidelink fa-brands fa-instagram"></i>Instagram</a></li>
+                    <li class="nav-item"><a href="privatuma_politika.html" class="nav-link px-2 text-muted">Privatuma
+                            politika</a></li>
                 </ul>
-                
+
             </footer>
         </div>
 
     </footer>
     <link href="https://fonts.googleapis.com/css2?family=Exo:wght@800&family=Montserrat&display=swap" rel="stylesheet">
-    
+
     <div class="popup_cookies container">
-        <button class="popup_btn" onclick="_switchMode('cookie-popup--short')" style="display: none;">Switch .cookie-popup--short</button>
-        <button class="popup_btn" onclick="_switchMode('cookie-popup--dark')" style="display: none;">Switch .cookie-popup--dark</button>
+        <button class="popup_btn" onclick="_switchMode('cookie-popup--short')" style="display: none;">Switch
+            .cookie-popup--short</button>
+        <button class="popup_btn" onclick="_switchMode('cookie-popup--dark')" style="display: none;">Switch
+            .cookie-popup--dark</button>
         <button class="popup_btn" onclick="_reset()" style="display: block;">Reset cookie accept</button>
-    
+
         <div class="pin-title"></div>
-    
+
         <div id="cookie_container" class="cookie_text cookie-popup cookie-popup--short cookie-popup--dark">
-    
+
             <div>
                 <h1 id="h1_cookie">Šī tīmekļa vietne izmanto sīkfailus</h1>
-                <p>Mēs uzstādām tikai nepieciešamās sīkdatnes, lai nodrošinātu savu interneta resursu pieejamību. Mēs neuzstādīsim nekāda
-                cita veida sīkdatnes, ja vien tās neieslēgsiet. Ja jūs vēlaties mainīt savus sīkdatņu iestatījumus, klikšķiniet uz pogas
-                "Personalizācija" šajā informatīvajā banerī vai "Sīkdatņu iestatījumi" šīs mājas lapas lejas daļā. Vairāk informācijas
-                par sīkdatnēm ir pieejama banerī un mūsu Sīkdatņu politikā</p>
-                 
-                
-                <a
-                    href="privatuma_politika.html">Privātuma politika</a>
+                <p>Mēs uzstādām tikai nepieciešamās sīkdatnes, lai nodrošinātu savu interneta resursu pieejamību. Mēs
+                    neuzstādīsim nekāda
+                    cita veida sīkdatnes, ja vien tās neieslēgsiet. Ja jūs vēlaties mainīt savus sīkdatņu iestatījumus,
+                    klikšķiniet uz pogas
+                    "Personalizācija" šajā informatīvajā banerī vai "Sīkdatņu iestatījumi" šīs mājas lapas lejas daļā.
+                    Vairāk informācijas
+                    par sīkdatnēm ir pieejama banerī un mūsu Sīkdatņu politikā</p>
+
+
+                <a href="privatuma_politika.html">Privātuma politika</a>
             </div>
             <div id="cookie_btn" class="cookie-popup-actions">
                 <button>Piekrist</button>
             </div>
-    
+
         </div>
-    
+
     </div>
     <script src="sendMail.js"></script>
     <script src="Request.js"></script>
     <script src="js/lightboxed/lightboxed.js"></script>
     <script src="script.js"></script>
-    
+
 </body>
+
 </html>
