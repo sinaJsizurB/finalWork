@@ -21,7 +21,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
     <header >
@@ -61,11 +63,17 @@
                     </li>
                 </ul>
             </div>
-            <section id="par_mums" class="section ">
+            <section id="par_mums" class="section">
                 <div class="section_text appearOnScroll">
                     <div class="about_us_text appearOnScroll">
                         <h1 class="">PAR MUMS</h1>
-                        <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam officiis quibusdam accusamus enim ducimus ad facere culpa deserunt. Fugit, eius. Quasi ducimus nulla iure ex culpa velit laudantium tenetur! Tempora officiis veniam eligendi necessitatibus voluptas recusandae corporis ipsum hic, dolore ex, adipisci reprehenderit, eius ipsam quam eveniet qui. Doloribus corrupti voluptatum maxime pariatur vel tempore nostrum explicabo odit unde rem, consequuntur sunt incidunt qui ex eos nisi fugit ut eveniet dolorum voluptas reprehenderit magnam facilis. Ipsum vero dicta architecto adipisci deserunt? Eligendi magni ab, totam molestias sunt provident vel placeat unde quidem, voluptate molestiae, veniam soluta illo alias rerum eveniet accusantium consequatur ducimus optio. Perspiciatis laborum impedit ratione, ut vero asperiores nesciunt dolor placeat!  </p>
+                        <p class="">AntiGravity® yoga jeb “gaisa joga”, ir jauna veida joga, kuras izcelsme meklējama Ņujorkā, bet tagad tā tiek piekopta
+                        vairākās valstīs. Antigravitātes joga apvieno tradicionālās jogas pozas, pilates un dejas, izmantojot šūpuļtīklu.<br>
+                        <br>
+                        AntiGravity® yoga ir jauna veida treniņš, ko izgudroja akrobāts Kristofers Harisons — bijušais vingrotājs un Brodvejas
+                        horeogrāfs. Tā sevī ietver virkni vingrojumu, iedvesmojoties no jogas, pilatēm, mākslas vingrošanas un gaisa akrobātikas
+                        šūpuļtīklam līdzīgā lentā, lai veiktu kopējo ķermeņa treniņu.  </p>
+                        <span id="readMore_span"><a id="readMore" href="about_us.html">Lasīt vairāk..</a></span>
                     </div>
                     <div class="section_img appearOnScroll">
                         <img src="img/pexels-photo-4323290.jpeg" alt="" width="300px">
@@ -88,19 +96,19 @@
                     </div>
                     <div class="input-group">
                         <span for="subscription_name" class="input-group-text">Vārds</span>
-                        <input type="text" aria-label="First name" class="form-control" id="subscription_name" name="name">
+                        <input type="text" aria-label="First name" class="form-control" id="subscription_name" name="name " autocomplete="none">
                     </div>
                     <div class="input-group">
                         <span for="subscription_surname" class="input-group-text">Uzvārds</span>
-                        <input type="text" aria-label="Last name" class="form-control" id="subscription_surname" name="surname">
+                        <input type="text" aria-label="Last name" class="form-control" id="subscription_surname" name="surname" autocomplete="none">
                     </div>
                     <div class="input-group">
                         <span for="subscription_email" class="input-group-text">e-pasts</span>
-                        <input type="email" aria-label="Email" class="form-control" id="subscription_email" aria-describedby="emailHelp" name="email">
+                        <input type="email" aria-label="Email" class="form-control" id="subscription_email" aria-describedby="emailHelp" name="email" autocomplete="none">
                     </div>
                     <div class="input-group">
                         <span for="subscription_phone" class="input-group-text">Tel.Nr.</span>
-                        <input type="text" aria-label="First name" class="form-control" id="subscription_phone" name="phone">
+                        <input type="text" aria-label="First name" class="form-control" id="subscription_phone" name="phone" autocomplete="none">
                     </div>
                     <div class="input-group mb-3 form-check">
                         <input type="checkbox" class="form-check-input" id="subscription_check">
@@ -152,6 +160,7 @@
                         <use xlink:href="#bootstrap" />
                     </svg>
                 </a>
+                
         
                 <ul class="nav col-md-4 justify-content-end">
                     <li class="nav-item"><a href="index.html" class="nav-link px-2 text-muted">Sākums</a></li>
@@ -160,6 +169,7 @@
                     <li class="nav-item"><a href="gallery.html" class="nav-link px-2 text-muted">Galerija</a></li>
                     <li class="nav-item"><a href="https://www.facebook.com/DejuStudijaExtra/" class="fbIcon nav-link px-2 text-muted"><i class="sidelink fa-brands fa-facebook"></i>Facebook</a></li>
                     <li class="nav-item"><a href="#" class="nav-link px-2 text-muted"><i class="sidelink fa-brands fa-instagram"></i>Instagram</a></li>
+                    <li class="nav-item"><a href="privatuma_politika.html" class="nav-link px-2 text-muted">Privatuma politika</a></li>
                 </ul>
                 
             </footer>
@@ -175,10 +185,10 @@
     
         <div class="pin-title"></div>
     
-        <div class="cookie_text cookie-popup cookie-popup--short cookie-popup--dark">
+        <div id="cookie_container" class="cookie_text cookie-popup cookie-popup--short cookie-popup--dark">
     
             <div>
-                <h1>Šī tīmekļa vietne izmanto sīkfailus</h1>
+                <h1 id="h1_cookie">Šī tīmekļa vietne izmanto sīkfailus</h1>
                 <p>Mēs uzstādām tikai nepieciešamās sīkdatnes, lai nodrošinātu savu interneta resursu pieejamību. Mēs neuzstādīsim nekāda
                 cita veida sīkdatnes, ja vien tās neieslēgsiet. Ja jūs vēlaties mainīt savus sīkdatņu iestatījumus, klikšķiniet uz pogas
                 "Personalizācija" šajā informatīvajā banerī vai "Sīkdatņu iestatījumi" šīs mājas lapas lejas daļā. Vairāk informācijas
@@ -188,7 +198,7 @@
                 <a
                     href="privatuma_politika.html">Privātuma politika</a>
             </div>
-            <div class="cookie-popup-actions">
+            <div id="cookie_btn" class="cookie-popup-actions">
                 <button>Piekrist</button>
             </div>
     
