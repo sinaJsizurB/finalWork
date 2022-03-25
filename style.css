@@ -806,6 +806,9 @@ footer .popup_cookies .popup_btn {
   #lightboxed--thumbs {
     margin-bottom: 100px;
   }
+  #section_text_aboutUs {
+    padding: 20px;
+  }
 }
 
 @media only screen and (max-width: 1000px) {
